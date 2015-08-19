@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ButtonHighlightProblem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Sl-io-Onq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="G2W-fe-0PU"/>
+                                    <barButtonItem systemItem="bookmarks" id="kax-YY-CFY">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="7Kc-Lt-tGo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good" id="Q3K-IO-cT1">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="jDF-NG-w0h"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Feedback" id="MZU-bW-uE1">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="mPH-Jg-Jqm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="compose" id="P6M-hV-gCK">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="cw1-L6-Zqf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ml1-ue-Mo7"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIU-cd-46L">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NKJ-2e-lC2"/>
+                                    <barButtonItem systemItem="bookmarks" id="JJN-Xj-IUv">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="6ir-ih-Rg8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="No" id="FAo-Zu-2qw">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="Ik0-sL-vSx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Visual" id="rGH-eq-oRn">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="ynY-vj-caJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Feedback" id="RAW-dA-Bj2">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="iPe-00-e7h"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="compose" id="IxT-by-7Ch">
+                                        <connections>
+                                            <action selector="touch:" destination="vXZ-lx-hvc" id="ocx-Tx-6Nk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kg8-pR-wKn"/>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iId-FB-Nrc">
+                                <rect key="frame" x="78" y="85" width="445" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">In iPhone portrait mode with the status bar visible, the lower buttons often don't highlight when tapped. Switch to landscape, hide the status bar or use the top buttons for comparison.
+
+This could only be reproduced on actual devices (iPhone 6 + iPhone 5S running iOS 8.4), not in the simulator</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUU-JR-zAN">
+                                <rect key="frame" x="16" y="44" width="118" height="30"/>
+                                <state key="normal" title="Toggle status bar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleStatusBar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jZO-P8-uxh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FUU-JR-zAN" firstAttribute="top" secondItem="0Sl-io-Onq" secondAttribute="bottom" id="7WG-rz-kq0"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KIU-cd-46L" secondAttribute="bottom" id="9ce-pQ-Qpp"/>
+                            <constraint firstItem="0Sl-io-Onq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="B6A-U4-zKT"/>
+                            <constraint firstItem="FUU-JR-zAN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="EMZ-ot-o2z"/>
+                            <constraint firstItem="KIU-cd-46L" firstAttribute="top" secondItem="iId-FB-Nrc" secondAttribute="bottom" constant="42" id="GS7-H7-BEX"/>
+                            <constraint firstItem="iId-FB-Nrc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="78" id="PFR-Zi-hah"/>
+                            <constraint firstAttribute="trailing" secondItem="KIU-cd-46L" secondAttribute="trailing" id="V6K-DZ-tM1"/>
+                            <constraint firstItem="iId-FB-Nrc" firstAttribute="top" secondItem="0Sl-io-Onq" secondAttribute="bottom" constant="41" id="cwA-6g-GAh"/>
+                            <constraint firstAttribute="trailing" secondItem="iId-FB-Nrc" secondAttribute="trailing" constant="77" id="h1e-ly-BiZ"/>
+                            <constraint firstAttribute="trailing" secondItem="0Sl-io-Onq" secondAttribute="trailing" id="jOf-te-1k7"/>
+                            <constraint firstItem="KIU-cd-46L" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tXi-BI-TqI"/>
+                            <constraint firstItem="0Sl-io-Onq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="zYg-5S-lr8"/>
+                            <constraint firstItem="KIU-cd-46L" firstAttribute="trailing" secondItem="0Sl-io-Onq" secondAttribute="trailing" id="zyU-p1-uPN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jOf-te-1k7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="iId-FB-Nrc" id="5ys-gs-txg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347" y="471"/>
+        </scene>
+    </scenes>
+</document>
